@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.button__start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.button__start button:hover {
+  cursor: pointer;
+  background-color: #047857;
+}
+
+#startBtn.running {
+  background-color: #e53e3e;
+}
+
+.button__start button {
+  background-color: #22c55e;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+}
+
+.content {
+  display: flex;
+  margin: 0px 100px;
+}
+
+.puzze {
+  display: grid;
+  flex: 4;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__item {
+  background: lightgreen;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.puzze__green {
+  background-color: #dcfce7;
+  font-weight: 700;
+  color: #22c55e;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__red {
+  background-color: #fee2e2;
+  font-weight: 700;
+  color: #ef4444;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__blue {
+  background-color: #dbeafe;
+  font-weight: 700;
+  color: #3b82f6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__purple {
+  background-color: #e9d5ff;
+  font-weight: 700;
+  color: #8b5cf6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__pink {
+  background-color: #fce7f3;
+  font-weight: 700;
+  color: #db2777;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__yellow {
+  background-color: #fef3c7;
+  font-weight: 700;
+  color: #eab308;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__indigo {
+  background-color: #e0e7ff;
+  font-weight: 700;
+  color: #6366f1;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__gray {
+  background-color: #f3f4f6;
+  font-weight: 700;
+  color: #6b7280;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__emeral {
+  background-color: #d1fae5;
+  font-weight: 700;
+  color: #10b981;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__amber {
+  background-color: #fef3c7;
+  font-weight: 700;
+  color: #f59e0b;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__lime {
+  background-color: #f4fddb;
+  font-weight: 700;
+  color: #84cc16;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.puzze__black {
+  background-color: black;
+}
+
+.tutorial {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #c6f6d5;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.move {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial__label {
+  margin: 10px 0;
+}
+
+.tutorial__clock {
+  font-weight: 700;
+}
+
+.tutorial__time {
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.arrows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.arrows__item {
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.arrows__up {
+  background-color: #a3a3a3;
+}
+
+.arrows__left {
+  background-color: #a3a3a3;
+}
+
+.arrows__right {
+  background-color: #a3a3a3;
+}
+
+.arrows__down {
+  background-color: #a3a3a3;
+}
+
+.wasd {
+  margin-top: 15px;
+}
+
+.history {
+  margin: 30px 0px 20px 20px;
+  background-color: #f7f7f7;
+  padding: 0px 20px 20px 20px;
+}
+
+.history__label {
+  text-align: center;
+  font-weight: 700;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 6px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #a3a3a3;
+  font-weight: bold;
+}

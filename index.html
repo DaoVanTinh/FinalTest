@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Game Xep Hinh</title>
+  </head>
+  <body>
+    <div class="button__start">
+      <button id="startBtn" onclick="Start()">Bắt đầu</button>
+      <div id="winMessage"></div>
+    </div>
+    <div class="content">
+      <div class="puzze">
+        <div class="puzze__item puzze__green">1</div>
+        <div class="puzze__item puzze__red">2</div>
+        <div class="puzze__item puzze__blue">3</div>
+        <div class="puzze__item puzze__purple">4</div>
+        <div class="puzze__item puzze__yellow">5</div>
+        <div class="puzze__item puzze__pink">6</div>
+        <div class="puzze__item puzze__indigo">7</div>
+        <div class="puzze__item puzze__gray">8</div>
+        <div class="puzze__item puzze__emeral">9</div>
+        <div class="puzze__item puzze__amber">10</div>
+        <div class="puzze__item puzze__lime">11</div>
+        <div class="puzze__item puzze__black"></div>
+      </div>
+      <div class="tutorial">
+        <div class="label">
+          <span class="tutorial__clock">Đồng Hồ</span>
+          <span class="tutorial__time" id="timer">00:00</span>
+        </div>
+        <div class="move">
+          <div class="tutorial__label">
+            <span>Hướng dẫn di chuyển</span>
+          </div>
+          <div class="arrows">
+            <div class="arrows__item arrows__none"></div>
+            <div class="arrows__item arrows__up">↑</div>
+            <div class="arrows__item arrows__none"></div>
+            <div class="arrows__item arrows__left">←</div>
+            <div class="arrows__item arrows__down">↓</div>
+            <div class="arrows__item arrows__right">→</div>
+          </div>
+          <div class="arrows wasd">
+            <div class="arrows__item arrows__none"></div>
+            <div class="arrows__item arrows__up">W</div>
+            <div class="arrows__item arrows__none"></div>
+            <div class="arrows__item arrows__left">A</div>
+            <div class="arrows__item arrows__down">S</div>
+            <div class="arrows__item arrows__right">D</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <div class="history__label">
+        <span>Lịch Sử Lượt Chơi</span>
+      </div>
+      <table class="history__table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Bước đi</th>
+            <th>Thời gian</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="/script.js"></script>
+</html>
