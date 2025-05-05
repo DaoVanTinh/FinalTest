@@ -3,50 +3,46 @@ let minutes = 0;
 let seconds = 0;
 let isRunning = false;
 let puzzleItems = [];
-let emptyItemIndex = 11; // Ô đen sẽ nằm ở vị trí cuối cùng ban đầu, nhưng sẽ thay đổi sau khi trộn
-let steps = 0; // Biến để lưu số bước đi của lượt chơi
+let emptyItemIndex = 11;
+let steps = 0;
 
-let history = []; // Mảng để lưu trữ lịch sử các lượt chơi
+let history = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Khởi tạo danh sách các ô puzze__item
   puzzleItems = Array.from(document.querySelectorAll(".puzze__item"));
 
   const startBtn = document.getElementById("startBtn");
   startBtn.addEventListener("click", startGame);
 
-  // Lắng nghe sự kiện bàn phím
   document.addEventListener("keydown", handleKeyPress);
 });
 
 function startGame() {
   const startBtn = document.getElementById("startBtn");
-  const winMessage = document.getElementById("winMessage"); // Thẻ thông báo chiến thắng
+  const winMessage = document.getElementById("winMessage");
 
   if (isRunning) {
-    // Nếu trò chơi đang chạy, kết thúc
     stopGame();
-    // Reset lại thông báo "YOU WIN!" khi chơi lại
+
     winMessage.textContent = "";
   } else {
-    // Nếu trò chơi chưa chạy, bắt đầu mới
     isRunning = true;
     resetClock();
     shufflePuzzleItems();
-    steps = 0; // Reset số bước đi khi bắt đầu lại
+    steps = 0;
     startTimer();
-    startBtn.textContent = "Kết thúc"; // Giữ chữ "Kết thúc" khi bắt đầu
-    startBtn.classList.add("running"); // Thêm lớp "running"
-    winMessage.textContent = ""; // Đảm bảo không có thông báo thắng khi bắt đầu
+    startBtn.textContent = "Kết thúc";
+    startBtn.classList.add("running");
+    winMessage.textContent = "";
   }
 }
 
 function stopGame() {
   const startBtn = document.getElementById("startBtn");
   isRunning = false;
-  clearInterval(timer); // Dừng bộ đếm thời gian
-  startBtn.textContent = "Bắt đầu"; // Đổi lại thành "Bắt đầu"
-  startBtn.classList.remove("running"); // Loại bỏ lớp "running"
+  clearInterval(timer);
+  startBtn.textContent = "Bắt đầu";
+  startBtn.classList.remove("running");
   console.log(`Trò chơi kết thúc! Thời gian: ${formatTime(minutes, seconds)}`);
 }
 
